@@ -12,17 +12,26 @@ namespace IS413Assignment5Real.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        //makes private repository of type ibooks
         private IBooksRepository _repository;
 
         public HomeController(ILogger<HomeController> logger,IBooksRepository repository)
         {
+            // home controller constructor guy has attribute _repository which is repository
             _logger = logger;
             _repository = repository;
         }
 
         public IActionResult Index()
         {
-            return View(_repository.Books);
+            if (ModelState.IsValid)
+            {
+                return View(_repository.Books);
+            }
+            else
+            {
+                return View();
+            }
         }
 
         public IActionResult BookList()

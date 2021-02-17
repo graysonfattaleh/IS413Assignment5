@@ -5802,14 +5802,14 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/graysonfattaleh/Desktop/IS413Assignment5Real/IS413Assignment5Real/IS413Assignment5Real.csproj",
+      "projectUniqueName": "/Users/graysonfattaleh/Desktop/Junior Core Comprehensive/IS 413/IS413Assignment5Real/IS413Assignment5Real/IS413Assignment5Real.csproj",
       "projectName": "IS413Assignment5Real",
-      "projectPath": "/Users/graysonfattaleh/Desktop/IS413Assignment5Real/IS413Assignment5Real/IS413Assignment5Real.csproj",
+      "projectPath": "/Users/graysonfattaleh/Desktop/Junior Core Comprehensive/IS 413/IS413Assignment5Real/IS413Assignment5Real/IS413Assignment5Real.csproj",
       "packagesPath": "/Users/graysonfattaleh/.nuget/packages/",
-      "outputPath": "/Users/graysonfattaleh/Desktop/IS413Assignment5Real/IS413Assignment5Real/obj/",
+      "outputPath": "/Users/graysonfattaleh/Desktop/Junior Core Comprehensive/IS 413/IS413Assignment5Real/IS413Assignment5Real/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/graysonfattaleh/.nuget/NuGet/NuGet.Config"
+        "/Users/graysonfattaleh/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

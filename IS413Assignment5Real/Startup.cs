@@ -26,9 +26,10 @@ namespace IS413Assignment5Real
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            // this guy makes it so your db context knows what server to connect to via the connection string
             services.AddDbContext<BookDBContext>(options =>
                 options.UseSqlServer(Configuration["ConnectionStrings:BooksDB"]));
-
+            // this guyu makes it so it knows how to implement the repository we use to query from
             services.AddScoped<IBooksRepository, EFBooksRepository>();
 
         }
@@ -59,7 +60,7 @@ namespace IS413Assignment5Real
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
-
+            // dont forget this guy, just calls the class method that will install new migrations and populate db
             SeedData.EnsurePopulated(app);
         }
     }

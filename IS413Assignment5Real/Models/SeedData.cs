@@ -12,16 +12,19 @@ namespace IS413Assignment5Real.Models
    
     public class SeedData
     {
+        // method to generate default recourds
         public static void EnsurePopulated(IApplicationBuilder application)
         {
+            // makes context variable from create scope guy which is also in start up
             BookDBContext context = application.ApplicationServices.CreateScope()
                 .ServiceProvider.GetRequiredService<BookDBContext>();
 
+            // checks to see if any migrations are needed and makes them
             if (context.Database.GetPendingMigrations().Any())
             {
                 context.Database.Migrate();
             }
-
+            // if there arent any books itll add the ones listed below.
             if (!context.Books.Any())
             {
                 context.AddRange(
@@ -146,6 +149,7 @@ namespace IS413Assignment5Real.Models
                         Price = 15.03
                     });
             }
+            // saves stuff added to context like all the new books
             context.SaveChanges();
         }
     }

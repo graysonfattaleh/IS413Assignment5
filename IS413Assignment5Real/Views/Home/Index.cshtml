@@ -19,7 +19,7 @@
             </tr>
         </thead>
         <tbody class="text-center">
-
+            <!--makes a row for each book entry-->
             @foreach (Book book in Model)
             {
 <tr class="text-center">
@@ -37,3 +37,4 @@
         </tbody>
     </table>
 </div>
+<div asp-validation-summary="All"></div>
